@@ -1,0 +1,12 @@
+{
+  "name": "PinduCloud Docs",
+  "theme": "mint",
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "index"
+      ]
+    }
+  ]
+}
