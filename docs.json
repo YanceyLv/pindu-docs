@@ -12,10 +12,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "开发文档",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "快速开始",
             "pages": [
               "index",
               "api-reference"
