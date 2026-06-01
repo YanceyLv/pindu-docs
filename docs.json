@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "PinduCloud",
+  "name": "品度云",
   "theme": "mint",
 
   "colors": {
@@ -18,7 +18,7 @@
             "group": "快速开始",
             "pages": [
               "index",
-              "api-reference"
+              "API 对接文档"
             ]
           }
         ]
