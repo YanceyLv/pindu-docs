@@ -34,10 +34,12 @@ Content-Type: application/json
 
 | 模型名称 | 调用时 `model` 参数 | 说明 |
 | --- | --- | --- |
-| Glm5.1 | `Glm5.1` | 通用对话、文本生成、问答、摘要等场景 |
-| Deepseek v4 pro flash | `Deepseek v4 pro flash` | 适合代码、推理、复杂问答和快速响应场景 |
-| Kimi2.6 | `Kimi2.6` | 适合长文本理解、总结、知识问答等场景 |
-| Minimax2.7 | `Minimax2.7` | 适合中文创作、对话、内容生成等场景 |
+| glm-5.1 | `glm-5.1` | 通用对话、文本生成、问答、摘要等场景 |
+| minimax-m2.7 | `minimax-m2.7` | 适合中文创作、对话、内容生成等场景 |
+| kimi-k2.5 | `kimi-k2.5` | 适合长文本理解、总结、知识问答等场景 |
+| kimi-k2.6 | `kimi-k2.6` | 适合长文本理解、总结、知识问答等场景 |
+| deepseek-v4-pro | `deepseek-v4-pro` | 适合代码、推理和复杂问答场景 |
+| deepseek-v4-flash | `deepseek-v4-flash` | 适合快速响应、轻量推理和高并发调用场景 |
 
 如平台实际分配的模型 ID 与上表不同，请以品度云后台或技术支持提供的模型 ID 为准。
 
@@ -59,7 +61,7 @@ http://101.37.203.77/v1/chat/completions
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| `model` | string | 是 | 模型名称，例如 `Glm5.1`、`Kimi2.6` |
+| `model` | string | 是 | 模型名称，例如 `glm-5.1`、`kimi-k2.6` |
 | `messages` | array | 是 | 对话消息列表 |
 | `temperature` | number | 否 | 随机性，常用范围 `0` 到 `2`，默认可填 `0.7` |
 | `top_p` | number | 否 | 核采样参数，常用范围 `0` 到 `1` |
@@ -90,7 +92,7 @@ curl http://101.37.203.77/v1/chat/completions \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "Glm5.1",
+    "model": "glm-5.1",
     "messages": [
       {
         "role": "system",
@@ -116,7 +118,7 @@ const response = await fetch("http://101.37.203.77/v1/chat/completions", {
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
-    model: "Kimi2.6",
+    model: "kimi-k2.6",
     messages: [
       { role: "system", content: "你是一个专业、简洁的中文助手。" },
       { role: "user", content: "帮我写一段产品介绍。" }
@@ -141,7 +143,7 @@ headers = {
     "Content-Type": "application/json",
 }
 payload = {
-    "model": "Deepseek v4 pro flash",
+    "model": "deepseek-v4-pro",
     "messages": [
         {"role": "system", "content": "你是一个专业、简洁的中文助手。"},
         {"role": "user", "content": "请解释什么是 API 中转站。"},
@@ -174,7 +176,7 @@ curl http://101.37.203.77/v1/chat/completions \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "Minimax2.7",
+    "model": "minimax-m2.7",
     "messages": [
       {
         "role": "user",
@@ -195,7 +197,7 @@ curl http://101.37.203.77/v1/chat/completions \
   "id": "chatcmpl_xxx",
   "object": "chat.completion",
   "created": 1710000000,
-  "model": "Glm5.1",
+  "model": "glm-5.1",
   "choices": [
     {
       "index": 0,
@@ -259,7 +261,7 @@ curl http://101.37.203.77/v1/chat/completions \
 
 ```json
 {
-  "model": "Kimi2.6",
+  "model": "kimi-k2.6",
   "messages": [
     {
       "role": "system",
@@ -297,7 +299,7 @@ curl http://101.37.203.77/v1/chat/completions \
 ```bash
 PINGDU_BASE_URL=http://101.37.203.77
 PINGDU_API_KEY=YOUR_API_KEY
-PINGDU_MODEL=Glm5.1
+PINGDU_MODEL=glm-5.1
 ```
 
 ## 最小可用请求
@@ -307,7 +309,7 @@ curl http://101.37.203.77/v1/chat/completions \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "Glm5.1",
+    "model": "glm-5.1",
     "messages": [
       {
         "role": "user",
