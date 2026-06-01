@@ -1,9 +1,24 @@
 # 欢迎使用 PinduCloud
 
-PinduCloud 提供兼容 OpenAI 的 API 服务。
+PinduCloud 品度云提供兼容 OpenAI 调用格式的 API 中转服务，可通过统一接口调用多种大模型。
 
 ## 快速开始
 
 ```bash
-curl https://api.pinducloud.com/v1/chat/completions \
-  -H "Authorization: Bearer sk-xxx"
+curl http://101.37.203.77/v1/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "Glm5.1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，请简单介绍一下你自己。"
+      }
+    ]
+  }'
+```
+
+## 文档入口
+
+- [API 对接文档](/api-reference)
