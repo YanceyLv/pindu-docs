@@ -1,12 +1,29 @@
 {
-  "name": "PinduCloud Docs",
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "PinduCloud",
   "theme": "mint",
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "index"
-      ]
-    }
-  ]
+
+  "colors": {
+    "primary": "#2563eb",
+    "light": "#3b82f6",
+    "dark": "#1d4ed8"
+  },
+
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "index"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "favicon": "/favicon.ico"
 }
